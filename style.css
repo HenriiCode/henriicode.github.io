@@ -1,0 +1,144 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: url("./img/bg.gif") no-repeat;
+  background-size: 2080px;
+  background-position-y: center;
+  background-position-x: center;
+  cursor: url("img/cursor.png"), auto;
+}
+
+head {
+  cursor: url("img/cursor.png"), auto;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+  -webkit-animation: cursorAnim 0.5s infinite alternate;
+          animation: cursorAnim 0.5s infinite alternate;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  -webkit-animation: cursorAnim2 0.5s infinite alternate;
+          animation: cursorAnim2 0.5s infinite alternate;
+}
+
+@-webkit-keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@-webkit-keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@-webkit-keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+    opacity: 15;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+    opacity: 15;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.expand {
+  -webkit-animation: cursorAnim3 0.5s forwards;
+          animation: cursorAnim3 0.5s forwards;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.box {
+  width: 450px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 5%;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  font-family: monospace;
+}
+
+.box-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.box h1 {
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-weight: 100;
+}
+
+.box h5 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.box p {
+  text-align: justify;
+}/*# sourceMappingURL=style.css.map */

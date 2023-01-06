@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Hi. I'm Henrii.</title>
+    </head>
+    <body>
+        <div class="box">
+            <img src="./img/pfp.png" alt="" class="box-img">
+            <h1>Henrii</h1>
+            <h5>YouTube Creator - Web Developer</h5>
+            <p>Hi. I'm Henrii. Nice to meet you here. I am a small YouTube content creator and make videos on two channels called 'Henrii' and 'geohenri'. On the Henrii channel I upload various types of videos about Minecraft, Tips and Tricks, etc.. On the geohenri channel I upload videos about geography related stuff like GeoGuessr or other games. Thank you!</p>
+        </div>
+        <div class="cursor"></div>
+            <script>
+
+                const cursor = document.querySelector('.cursor');
+        
+                document.addEventListener('mousemove', e => {
+                    cursor.setAttribute("style", "top: "+(e.pageY - 7)+"px; left: "+(e.pageX - 7)+"px;")
+                })
+
+                document.addEventListener('click', () => {
+                    cursor.classList.add("expand");
+
+                        setTimeout(() => {
+                            cursor.classList.remove("expand");
+                        }, 500)
+                })
+            </script>
+    </body>
+</html>
